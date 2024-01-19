@@ -18,20 +18,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('migrate', function () {
-    Artisan::call('migrate --force');
-
-    return Artisan::output();
-});
-
-Route::get('migrate/fresh', function () {
-    Artisan::call('migrate:fresh --force');
-
-    return Artisan::output();
-});
-
-Route::get('seed', function () {
-    Artisan::call('db:seed --force');
-
-    return Artisan::output();
-});
