@@ -24,6 +24,12 @@ Route::get('migrate', function () {
     return Artisan::output();
 });
 
+Route::get('migrate/fresh', function () {
+    Artisan::call('migrate:fresh --force');
+
+    return Artisan::output();
+});
+
 Route::get('seed', function () {
     Artisan::call('db:seed --force');
 
