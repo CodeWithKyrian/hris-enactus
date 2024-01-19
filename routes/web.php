@@ -19,13 +19,13 @@ Route::get('/', function () {
 });
 
 Route::get('migrate', function () {
-    Artisan::call('migrate');
+    Artisan::call('migrate --force');
 
     return Artisan::output();
 });
 
 Route::get('seed', function () {
-    Artisan::call('db:seed');
+    Artisan::call('db:seed --force');
 
     return Artisan::output();
 });
